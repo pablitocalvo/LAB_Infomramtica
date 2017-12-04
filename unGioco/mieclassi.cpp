@@ -31,7 +31,7 @@ public:
   {
 	  return ( stato == FUORI );
   }
-  
+   
   bool is_scoperta()
   {
 	return ( stato == SCOPERTA );
@@ -68,8 +68,8 @@ public:
 
 
 class Partita
-{
-	int carte_sul_tavolo=10 ; 
+{	const int numero_carte_del_gioco=10;
+	int numero_carte_sul_tavolo=10 ; 
 	
 	// TODO : generare una didtribuzione casuale ...
 	Carta  mazzo_carte[ 10 ] = { Carta('A') , Carta('B') , Carta('C'),
@@ -81,7 +81,7 @@ public:
 
 Partita ()
 	{	
-		stampa_le_carte();
+		stampa_le_carte_sul_tavolo();
 	};
 	
 ~Partita ()
@@ -90,7 +90,7 @@ Partita ()
 	}
 
 
-	void stampa_le_carte()
+	void stampa_le_carte_sul_tavolo()
 	{	
 		// su windows usare system("cls");
 		// su LINUX  usare system("clear");
@@ -99,14 +99,15 @@ Partita ()
 	
 		cout << endl ;
 		
-		for (int i = 0 ; i < carte_sul_tavolo; ++i)
+		for (int i = 0 ; i < numero_carte_del_gioco; ++i)
 		{
-			cout<< i << "   " ;
+			if ( ! mazzo_carte[i].is_fuori() ) 
+				cout<< i << "   " ;
 		};
 		
 		cout << endl;
 		
-		for (int i = 0 ; i < carte_sul_tavolo ; ++i)
+		for (int i = 0 ; i < numero_carte_del_gioco ; ++i)
 		{
 			if ( mazzo_carte[i].is_fuori() ) 
 			    {    cout << "    " ; continue;}
@@ -132,7 +133,7 @@ Partita ()
 	   
 	   mazzo_carte[i].viene_scoperta();
 	   
-	   stampa_le_carte();
+	   stampa_le_carte_sul_tavolo();
 	   
 	   return & mazzo_carte[i];
 	   
@@ -147,7 +148,6 @@ Partita ()
 		{ 	
 			
 			carta1=una_carta_scelta_dallo_utente();
-			
 			carta2=una_carta_scelta_dallo_utente();
 					
 			if ( (*carta1).is_uguale_a(carta2) )
@@ -155,9 +155,9 @@ Partita ()
 				(*carta1).viene_tolta_dal_tavolo() ;
 				(*carta2).viene_tolta_dal_tavolo() ;
 				
-				carte_sul_tavolo = carte_sul_tavolo - 2 ;
+				numero_carte_sul_tavolo = numero_carte_sul_tavolo - 2 ;
 				
-				if (carte_sul_tavolo == 0 ) 
+				if (numero_carte_sul_tavolo == 0 ) 
 					partita_finita = true;
 			}
 			else
