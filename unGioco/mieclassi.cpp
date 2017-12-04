@@ -1,3 +1,26 @@
+/*
+ * mieclassi.cpp
+ * 
+ * Copyright 2017 pablitocalvo
+ * 
+ * This program is free software; you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation; either version 2 of the License, or
+ * (at your option) any later version.
+ * 
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this program; if not, write to the Free Software
+ * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston,
+ * MA 02110-1301, USA.
+ * 
+ * 
+ */
+ 
 #include <string>
 #include <iostream>
 using namespace std ;
@@ -55,7 +78,7 @@ public:
 	  return ( stato == COPERTA );
   }
   
-  bool is_uguale_a ( Carta* c )
+  bool is_uguale_a ( Carta * c )
   { 
 	  return ( valore == c->get_valore() ) ;
   }
@@ -101,8 +124,9 @@ Partita ()
 		
 		for (int i = 0 ; i < numero_carte_del_gioco; ++i)
 		{
-			if ( ! mazzo_carte[i].is_fuori() ) 
-				cout<< i << "   " ;
+			if ( mazzo_carte[i].is_fuori() ) 
+				cout<< "    " ;
+			else cout << i<<"   ";
 		};
 		
 		cout << endl;
@@ -121,7 +145,7 @@ Partita ()
 		cout << endl;
 	}	
 		
-	Carta * una_carta_scelta_dallo_utente()
+	Carta * una_carta_scelta_e_scoperta_dallo_utente()
 	{  
 		int i;
 	 
@@ -147,8 +171,8 @@ Partita ()
 		do
 		{ 	
 			
-			carta1=una_carta_scelta_dallo_utente();
-			carta2=una_carta_scelta_dallo_utente();
+			carta1=una_carta_scelta_e_scoperta_dallo_utente();
+			carta2=una_carta_scelta_e_scoperta_dallo_utente();
 					
 			if ( (*carta1).is_uguale_a(carta2) )
 			{   
