@@ -1,0 +1,49 @@
+SCEGLIERE ALMENO UN PUNTO DA SVILUPPARE !
+
+
+1)
+
+modificare il costruttore della classe partita in modo che generi una distribuzione casuale delle carte
+
+
+2)
+
+- aggiungere un'attributo alla classe partita ( int numero_tentativi )
+- inizializzarlo a 0 nel costruttore
+- nel metodo gioca incrementarlo di uno ad ogni tentativo (coppia di carte scoperte)
+- nel distruttore stampare il messaggio "Bravo hai finito la partita in " << numero_tentativi
+
+2bis) difficile ...
+- tenere traccia del record di mosse per finire la partita 
+ad ogni conclusione della partita (nel costruttore) si confronta il numero_tentativi, se è il nuovo record 
+si stampa il messaggio "bravo hai fatto il record"
+
+3) 
+-modificare il numero_carte_del_gioco da 10 a 40 (20 coppie di simboli)
+-modificare il metodo stampa_le_carte_sul_tavolo() in modo che le stampi nella forma :
+
+1   2   3   4   5   6   7   8   9   10  
+X   X   X   X   x   x   x   x   x   x
+
+11  12  13  14  15  16  17  18  19  20  
+X   X   X   X   X   X   x   x   x   x
+
+21  22  23  24  25  26  27  28  29  30
+X   X   X   X   X   X   x   x   x   x
+
+31  32  33  34  35  36  37  38  39  40
+x   x   x   x   x   x   x   x   x   x
+
+
+4) modificare il programma in modo che preveda il gioco a due ..(4bis o a n giocatori!) il programma chiederà 
+i nomi dei due giocatori, a turno stamperà il messaggio " tocca a ...." se il giocatore in turno scopre una coppia 
+tocca di nuovo a lui ..
+
+
+5) tenere i record in un file !!
+
+6) modificare il programma per far giocare uno o più giocatori in rete!! ( va be' l'anno prossimo )
+
+BUONE VACANZE!
+
+
