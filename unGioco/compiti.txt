@@ -1,6 +1,9 @@
 SCEGLIERE ALMENO UN PUNTO DA SVILUPPARE !
 cronometrare quanto tempo impiegate a sviluppare i punti (senza ansie da prestazione, su alcuni potrebbero volerci ore e giorni!)
 
+0)
+    modificare il costruttore della classe partita in modo tale che all'inizio vengano mostrate tutte le carte per un breve periodo di tempo.
+    
 1)
 
 modificare il costruttore della classe partita in modo che generi una distribuzione casuale delle carte
@@ -40,7 +43,7 @@ i nomi dei due giocatori, a turno stamperà il messaggio " tocca a ...." se il g
 tocca di nuovo a lui ..
 
 
-5) tenere i record in un file !!
+5) tenere i record (inteso come punteggio migliroe) in un file !!
 
 6) modificare il programma per far giocare uno o più giocatori in rete!! ( va be' l'anno prossimo )
 
