@@ -1,5 +1,21 @@
 
+/*
+ data una matrice es 
+  
+  25  10  11  12  13                                                             
+  24   9   2   3  14                                                             
+  23   8   1   4  15                                                             
+  22   7   6   5  16                                                             
+  21  20  19  18  17                 
+ 
+stampa gli elementi a spirale partendo da quello centrale  seguendo nord , est , sud ,ovest 
+
+1  2  3  4  5  6  7  8  9  10  11  12  13  14  15  16  17  18  19  20  21  22  23  24  25  
+*/
+
+
 #include <iostream>
+#include<iomanip>
 
 using namespace std;
 #define N  5
@@ -20,7 +36,7 @@ main ()
   for (int r = 0; r < N; r++)
     {
       for (int c = 0; c < N; c++)
-	cout << mat[r][c] << " ";
+	cout <<setw(3)<< mat[r][c] << " ";
       cout << endl;
     }
   cout << endl;
