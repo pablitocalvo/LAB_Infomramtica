@@ -1,6 +1,11 @@
 
 /*
- data una matrice es 
+ data una matrice 
+     quadrata 
+     di dimensione dispari
+ 
+ esempio: 
+  5x5 con i seguenti valori:
   
   25  10  11  12  13                                                             
   24   9   2   3  14                                                             
