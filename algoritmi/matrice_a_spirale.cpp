@@ -47,8 +47,8 @@ main ()
   cout << endl;
 
 
-  int r = 2;
-  int c = 2;			// n/2+1 
+  int r = N/2;
+  int c = N/2;			// n/2+1 
   cout << mat[r][c] << "  ";
 
   int ite = 2;
