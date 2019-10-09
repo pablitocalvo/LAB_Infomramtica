@@ -19,7 +19,7 @@ stampa gli elementi a spirale partendo da quello centrale  seguendo nord , est ,
 
 
 #include <iostream>
-#include<iomanip>
+
 
 using namespace std;
 #define N  5
